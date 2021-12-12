@@ -1,0 +1,11 @@
+{
+  "availability-zones:account=674190436136:region=eu-west-1": [
+    "eu-west-1a",
+    "eu-west-1b",
+    "eu-west-1c"
+  ],
+  "hosted-zone:account=674190436136:domainName=recica.tf:region=eu-west-1": {
+    "Id": "/hostedzone/Z0720167F6OTV0LAZJHH",
+    "Name": "recica.tf."
+  }
+}
