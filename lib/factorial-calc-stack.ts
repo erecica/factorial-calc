@@ -24,7 +24,7 @@ export class FactorialCalcStack extends Stack {
       desiredCapacity: 1,
     });
     
-    // Add ESC Task
+    // Add ECS Task
     const taskDefinition = new ecs.Ec2TaskDefinition(this, 'TaskDef');
     
     // Add container
@@ -60,7 +60,7 @@ export class FactorialCalcStack extends Stack {
       port: 443,
     });
 
-    // Add SSL Certifcate. In this case static    
+    // Add SSL Certifcate. In this case static one.    
     const listenerCertificate = elbv2.ListenerCertificate.fromArn(
       'arn:aws:acm:eu-west-1:674190436136:certificate/c9fc930c-d695-40d8-a0aa-4d5fc02cfd30'
     );
@@ -74,12 +74,12 @@ export class FactorialCalcStack extends Stack {
       targets: [ecsService],
     });
 
-    // Point DNS record to load the new loadbalancer
+    // Get Route53 zone records 
     const route53_hosted_zone = route53.HostedZone.fromLookup(this, 'Zone', {
       domainName: 'recica.tf'
     })
 
-    // Add a alias record to the zone and point it to the Public DNS of the Load Balancer
+    // Add a alias record to the zone that points to the Public DNS of the Load Balancer
     new route53.ARecord(this, 'AliasRecord', {
       zone: route53_hosted_zone,
       target: route53.RecordTarget.fromAlias(new targets.LoadBalancerTarget(lb)),
