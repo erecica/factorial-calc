@@ -55,7 +55,8 @@ If you have a IAM user with AdministratorAccess, you can skip these step:
 
 1. Download this repository or use ```git clone https://github.com/erecica/factorial-calc.git``` 
 2. Go to the folder ```$ cd factorial-calc```
-3. The first time you deploy an AWS CDK app into an environment (account/region), you can install a “bootstrap stack”. This stack includes resources that are used in the toolkit’s operation. For example, the stack includes an S3 bucket that is used to store templates and assets during the deployment process.
+3. Run ```$ npm install```
+4. The first time you deploy an AWS CDK app into an environment (account/region), you can install a “bootstrap stack”. This stack includes resources that are used in the toolkit’s operation. For example, the stack includes an S3 bucket that is used to store templates and assets during the deployment process.
 
     You can use the cdk bootstrap command to install the bootstrap stack into an environment:
     
