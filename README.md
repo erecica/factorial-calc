@@ -89,7 +89,7 @@ You should see the following screen:
 
 ## APP
 
-The app calculates the factorial of a non-negative integer, is multiplication of all integers smaller than or equal to n. For example, the factorial of 6 is 6*5*4*3*2*1 which is 720.
+The app calculates the factorial of a non-negative integer, is multiplication of all integers smaller than or equal to n. For example, the factorial of 6 is 6 * 5 * 4 * 3 * 2 * 1 which is 720.
 The calculation script is based on [GeegsforGeeks](https://www.geeksforgeeks.org/program-for-factorial-of-a-number/) PHP script.
 
 It runs on a Docker container on ECS infrastructure. It builds on top of the [PHP Nginx Alpine](https://hub.docker.com/r/luzifer/alpine-nginx-php) container. The build is done locally by Docker. The build and deployment is initiated by CDK stack, so you don't need to worry about that.
