@@ -42,7 +42,7 @@ If you have a IAM user with AdministratorAccess, you can skip these step:
 
     ```npm install -g aws-cdk``` 
 
-2. Check if the installation 
+2. Check if the installation succeeded
     ```
     $ cdk --version 
     2.1.0 (build f4f18b1)
