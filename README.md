@@ -27,6 +27,11 @@ You need the following to run the code:
 - [AWS Account](https://aws.amazon.com) (Create an account and add a role with 'AdministratorAccess' role. We will use this to create the resources)
 - Code editor (eg. [Visual Studio Code](https://code.visualstudio.com/download))
 
+## Region env setting
+
+Currently the default region is set to ``` eu-west-1 ```. All resources will be deployed to this region!
+You can change this within the file [bin/factorial-calc.ts](bin/factorial-calc.ts)
+
 ## 1. AWS Authentication
 
 For this exercise, you need to set up your aws cli credentials. For this you need IAM credentials with  'AdministratorAccess'.
