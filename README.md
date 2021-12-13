@@ -11,6 +11,10 @@ In the picture below you get a general idea ( doesn't include all services! ) of
   <img alt="Infrastructure" src="app/assets/Infra-CDK-PHP.png">
 </p>
 
+For a detailed overview of the infrastructure created, you can check this [Cloudfromation visual](app/assets/Cloudformation-visual.png)
+
+The resources are defined within the file [lib/factorial-calc-stack.ts](lib/factorial-calc-stack.ts). The CDK create all the necessary resources that are needed.
+
 ---
 
 ## Prequest
@@ -83,7 +87,7 @@ You should see the following screen:
 ---
 
 ## Resources created bij CDK
-The resources are defined within the file [lib/factorial-calc-stack.ts](lib/factorial-calc-stack.ts). The CDK create all the necessary resources that are needed and sets the correct 
+The resources are defined within the file [lib/factorial-calc-stack.ts](lib/factorial-calc-stack.ts). The CDK create all the necessary resources that are needed.
 
 ---
 
