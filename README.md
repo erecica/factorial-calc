@@ -23,6 +23,7 @@ You need the following to run the code:
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#install-bundle-other) 
 - [Node > 12](https://nodejs.org/en/)
+- [Docker](https://docs.docker.com/desktop/) 
 - [AWS Account](https://aws.amazon.com) (Create an account and add a role with 'AdministratorAccess' role. We will use this to create the resources)
 - Code editor (eg. [Visual Studio Code](https://code.visualstudio.com/download))
 
@@ -86,14 +87,16 @@ You should see the following screen:
 
 ---
 
-## Resources created bij CDK
-The resources are defined within the file [lib/factorial-calc-stack.ts](lib/factorial-calc-stack.ts). The CDK create all the necessary resources that are needed.
+## APP
 
----
+The app calculates the factorial of a non-negative integer, is multiplication of all integers smaller than or equal to n. For example, the factorial of 6 is 6*5*4*3*2*1 which is 720.
+The calculation script is based on [GeegsforGeeks](https://www.geeksforgeeks.org/program-for-factorial-of-a-number/) PHP script.
+
+It runs on a Docker container on ECS infrastructure. It builds on top of the [PHP Nginx Alpine](https://hub.docker.com/r/luzifer/alpine-nginx-php) container. The build is done locally by Docker. The build and deployment is initiated by CDK stack, so you don't need to worry about that.
 
 ## Cleanup
 To avoid unexpected charges to your account, make sure you clean up your CDK stack.
-Use
+Use:
 
 ```sh
 cdk destroy
