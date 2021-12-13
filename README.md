@@ -27,7 +27,7 @@ You need the following to run the code:
 - [AWS Account](https://aws.amazon.com) (Create an account and add a role with 'AdministratorAccess' role. We will use this to create the resources)
 - Code editor (eg. [Visual Studio Code](https://code.visualstudio.com/download))
 
-## AWS Authentication
+## 1. AWS Authentication
 
 For this exercise, you need to set up your aws cli credentials. For this you need IAM credentials with  'AdministratorAccess'.
 
@@ -37,7 +37,7 @@ If you have a IAM user with AdministratorAccess, you can skip these step:
 
 ---
 
-## Install CDK
+## 2. Install CDK
 
 1. Open a terminal session and run the following command:
 
@@ -51,7 +51,7 @@ If you have a IAM user with AdministratorAccess, you can skip these step:
 
 ---
 
-## Create resources
+## 3. Create resources
 
 1. Download this repository or use ```git clone https://github.com/erecica/factorial-calc.git``` 
 2. Go to the folder ```$ cd factorial-calc```
