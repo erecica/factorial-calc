@@ -1,4 +1,4 @@
-# CDK & PHP factorial of a non-negative integer!
+# AWS CDK ECS | Factorial of a non-negative integer!
 
 This is a PHP script running within a Docker container on AWS ECS and calculates factorial of a non-negative integer of a value given by the user.
 
