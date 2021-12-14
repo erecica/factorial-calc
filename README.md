@@ -13,7 +13,7 @@ In the picture below you get a general idea ( doesn't include all services! ) of
 
 For a detailed overview of the infrastructure created, you can check this [Cloudfromation visual](app/assets/Cloudformation-visual.png)
 
-The resources are defined within the file [lib/factorial-calc-stack.ts](lib/factorial-calc-stack.ts). The CDK create all the necessary resources that are needed.
+The resources are defined within the file [lib/factorial-calc-stack.ts](lib/factorial-calc-stack.ts). The CDK create all the necessary resources.
 
 ---
 
@@ -22,7 +22,7 @@ The resources are defined within the file [lib/factorial-calc-stack.ts](lib/fact
 You need the following to run the code:
 
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#install-bundle-other) 
-- [Node > 12](https://nodejs.org/en/)
+- [Node >= 12](https://nodejs.org/)
 - [Docker](https://docs.docker.com/desktop/) 
 - [AWS Account](https://aws.amazon.com) (Create an account and add a role with 'AdministratorAccess' role. We will use this to create the resources)
 - Code editor (eg. [Visual Studio Code](https://code.visualstudio.com/download))
@@ -39,14 +39,19 @@ For this exercise, you need to set up your aws cli credentials. For this you nee
 If you have a IAM user with AdministratorAccess, you can skip these step: 
 
 1. Go to the AWS IAM console dashboard and create a new user.
+2. Install AWS CLI with your IAM credentials 
+   ```
+   $ aws configure
+   ```
 
 ---
 
 ## 2. Install CDK
 
 1. Open a terminal session and run the following command:
-
-    ```npm install -g aws-cdk``` 
+   ```
+   $ npm install -g aws-cdk
+   ``` 
 
 2. Check if the installation succeeded
     ```
@@ -59,21 +64,32 @@ If you have a IAM user with AdministratorAccess, you can skip these step:
 ## 3. Create resources
 
 1. Download this repository or use ```git clone https://github.com/erecica/factorial-calc.git``` 
-2. Go to the folder ```$ cd factorial-calc```
-3. Run ```$ npm install```
+2. Go to the folder 
+   ```
+   $ cd factorial-calc
+   ```
+
+3. Install the dependencies 
+   ```
+   $ npm install
+   ```
+
 4. The first time you deploy an AWS CDK app into an environment (account/region), you can install a “bootstrap stack”. This stack includes resources that are used in the toolkit’s operation. For example, the stack includes an S3 bucket that is used to store templates and assets during the deployment process.
 
     You can use the cdk bootstrap command to install the bootstrap stack into an environment:
-    
-    ```$ cdk bootstrap```
+    ```
+    $ cdk bootstrap
+    ```
 
     Result should be something like this:
    
-    ``` Bootstrapping environment aws://999999999999/us-east-1...```
-
+    ```
+    Bootstrapping environment aws://999999999999/us-east-1...
+    ```
 4. Whe this finishes, you are ready to deploy the infrastructure. Use cdk deploy to deploy a CDK app:
-
-    ```$ cdk deploy```
+   ```
+   $ cdk deploy
+   ```
 
 5. Confirm!
 
@@ -102,8 +118,8 @@ It runs on a Docker container on ECS infrastructure. It builds on top of this [P
 
 ## Cleanup
 To avoid unexpected charges to your account, make sure you clean up your CDK stack.
-Use:
+Run:
 
-```sh
-cdk destroy
-```
+  ```
+  $ cdk destroy
+  ```
