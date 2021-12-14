@@ -86,14 +86,14 @@ If you have a IAM user with AdministratorAccess, you can skip these step:
     ```
     Bootstrapping environment aws://999999999999/us-east-1...
     ```
-4. Whe this finishes, you are ready to deploy the infrastructure. Use cdk deploy to deploy a CDK app:
+4. Whe this finishes, you are ready to deploy the infrastructure and run the app. Use cdk deploy to deploy a CDK app. Run:
    ```
    $ cdk deploy
    ```
 
 5. Confirm!
 
-After a while your app is ready to deploy.
+After a while (about 6 minutes) your app is ready to deploy.
 
 ---
 
