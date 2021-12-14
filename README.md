@@ -38,7 +38,7 @@ For this exercise, you need to set up your aws cli credentials. For this you nee
 
 If you have a IAM user with AdministratorAccess, you can skip these step: 
 
-1. Go to the AWS IAM console dashboard and create a new user.
+1. Go to the AWS IAM console [dashboard](https://console.aws.amazon.com/iamv2/home?#/users) and create a new user.
 2. Install AWS CLI with your IAM credentials 
    ```
    $ aws configure
